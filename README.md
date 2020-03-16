@@ -1,7 +1,7 @@
 # terraform-kapsule-module
 ```
 module "kapsule-quantile" {
-  source = "gris-gris/terraform-kapsule-module"
+  source = "gris-gris/kapsule/scaleway"
 
   kapsule_name = "name"
   kapsule_pg_name = "name"
