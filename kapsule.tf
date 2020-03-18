@@ -26,3 +26,8 @@ resource "scaleway_k8s_cluster_beta" "kapsule" {
     expendable_pods_priority_cutoff = -5
   }
 }
+
+resource "local_file" "kubeconfig" {
+    content = scaleway_k8s_cluster_beta.kapsule.kubeconfig[0].config_file
+    filename = "./sensitive/kubeconfig"
+}
