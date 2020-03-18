@@ -29,5 +29,5 @@ resource "scaleway_k8s_cluster_beta" "kapsule" {
 
 resource "local_file" "kubeconfig" {
     content = scaleway_k8s_cluster_beta.kapsule.kubeconfig[0].config_file
-    filename = "./sensitive/kubeconfig"
+    filename = "./sensitive/kubeconfig_${var.kapsule_name}"
 }
