@@ -2,6 +2,10 @@ variable "kapsule_name" {
   default = ""
 }
 
+variable "kapsule_size" {
+  default = 1
+}
+
 variable "kapsule_pg_name" {
   default = ""
 }
@@ -39,7 +43,7 @@ variable "kapsule_tags" {
   type        = list(string)
 }
 
-variable "kapsule_default_flavor" {
+variable "kapsule_node_type" {
   default = ""
 }
 
