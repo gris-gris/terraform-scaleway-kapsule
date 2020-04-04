@@ -56,11 +56,11 @@ variable "kapsule_ah" {
 }
 
 variable "kapsule_as_lowcap" {
-  default = ""
+  default = var.kapsule_size
 }
 
 variable "kapsule_as_highcap" {
-  default = ""
+  default = "${var.kapsule_as_lowcap + 3}"
 }
 
 variable "kapsule_as_disable_scaledown" {
