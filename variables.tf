@@ -2,6 +2,10 @@ variable "kapsule_name" {
   default = ""
 }
 
+variable "kapsule_size" {
+  default = 1
+}
+
 variable "kapsule_pg_name" {
   default = ""
 }
@@ -39,7 +43,7 @@ variable "kapsule_tags" {
   type        = list(string)
 }
 
-variable "kapsule_default_flavor" {
+variable "kapsule_node_type" {
   default = ""
 }
 
@@ -52,11 +56,11 @@ variable "kapsule_ah" {
 }
 
 variable "kapsule_as_lowcap" {
-  default = ""
+  default = var.kapsule_size
 }
 
 variable "kapsule_as_highcap" {
-  default = ""
+  default = "${var.kapsule_as_lowcap + 3}"
 }
 
 variable "kapsule_as_disable_scaledown" {

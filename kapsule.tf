@@ -7,8 +7,8 @@ resource "scaleway_k8s_cluster_beta" "kapsule" {
   tags = var.kapsule_tags
 
   default_pool {
-    node_type = var.kapsule_default_flavor
-    size = 1
+    node_type = var.kapsule_node_type
+    size = var.kapsule_as == true ? var.kapsule_size : 1
     autoscaling = var.kapsule_as
     autohealing = var.kapsule_ah
     min_size = var.kapsule_as_lowcap
