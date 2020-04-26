@@ -26,10 +26,10 @@ module "kapsule-quantile" {
   kapsule_pg_policy_mode = "enforced"
   kapsule_pg_zone = "fr-par-1"
 
-  kapsule_as = true # Note, if true kapsule_size will be ignored
-  kapsule_ah = true
-  kapsule_as_lowcap = var.kapsule_size
-  kapsule_as_highcap = "${var.kapsule_as_lowcap + 3}"
-  kapsule_as_disable_scaledown = false
+  kapsule_autoscalling = true # Note, if true kapsule_size will be ignored
+  kapsule_autoscalling_lowcap = var.kapsule_size
+  kapsule_autoscalling_highcap = "${var.kapsule_autoscalling_lowcap + 3}"
+  kapsule_autoscalling_disable_scaledown = false
+  kapsule_autohealing = true
 }
 ```
