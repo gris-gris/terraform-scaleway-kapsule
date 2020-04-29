@@ -47,6 +47,12 @@ variable "kapsule_container_runtime" {
   description = "Possible values: docker, crio, containerd"
   default = "docker"
 }
+
+variable "kapsule_default_pool_tags" {
+  description = "The set of basic tags for default pool."
+  type        = list(string)
+}
+
 variable "kapsule_node_type" {
   default = ""
 }

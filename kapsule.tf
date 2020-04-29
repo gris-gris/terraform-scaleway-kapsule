@@ -15,6 +15,7 @@ resource "scaleway_k8s_cluster_beta" "kapsule" {
     max_size = var.kapsule_autoscalling_highcap
     placement_group_id = scaleway_instance_placement_group.kapsule-pg.id
     container_runtime = var.kapsule_container_runtime
+    tags = var.kapsule_default_pool_tags
   }
 
   autoscaler_config {
