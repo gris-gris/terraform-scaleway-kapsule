@@ -43,6 +43,10 @@ variable "kapsule_tags" {
   type        = list(string)
 }
 
+variable "kapsule_container_runtime" {
+  description = "Possible values: docker, crio, containerd"
+  default = "docker"
+}
 variable "kapsule_node_type" {
   default = ""
 }
