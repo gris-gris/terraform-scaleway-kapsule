@@ -47,22 +47,22 @@ variable "kapsule_node_type" {
   default = ""
 }
 
-variable "kapsule_as" {
+variable "kapsule_autoscalling" {
   default = ""
 }
 
-variable "kapsule_ah" {
+variable "kapsule_autohealing " {
   default = ""
 }
 
-variable "kapsule_as_lowcap" {
+variable "kapsule_autoscalling_lowcap" {
   default = var.kapsule_size
 }
 
-variable "kapsule_as_highcap" {
-  default = "${var.kapsule_as_lowcap + 3}"
+variable "kapsule_autoscalling_highcap" {
+  default = "${var.kapsule_autoscalling_lowcap + 3}"
 }
 
-variable "kapsule_as_disable_scaledown" {
+variable "kapsule_autoscalling_disable_scaledown" {
   default = ""
 }
