@@ -61,16 +61,16 @@ variable "kapsule_autoscalling" {
   default = ""
 }
 
-variable "kapsule_autohealing " {
+variable "kapsule_autohealing" {
   default = ""
 }
 
 variable "kapsule_autoscalling_lowcap" {
-  default = var.kapsule_size
+  default = ""
 }
 
 variable "kapsule_autoscalling_highcap" {
-  default = "${var.kapsule_autoscalling_lowcap + 3}"
+  default = ""
 }
 
 variable "kapsule_autoscalling_disable_scaledown" {
