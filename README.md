@@ -30,5 +30,4 @@ module "kapsule-quantile" {
   kapsule_autoscaling_highcap = 3
   kapsule_autoscaling_disable_scaledown = false
 }
-}
 ```
