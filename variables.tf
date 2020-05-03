@@ -1,5 +1,9 @@
 variable "kapsule_name" {
-  default = ""
+  default = "default_kapsule"
+}
+
+variable "kapsule_default_pool_name" {
+  default = "default_pool"
 }
 
 variable "kapsule_size" {
@@ -7,7 +11,7 @@ variable "kapsule_size" {
 }
 
 variable "kapsule_pg_name" {
-  default = ""
+  default = "default_kapsule_pg"
 }
 
 variable "kapsule_pg_policy_type" {
@@ -19,23 +23,23 @@ variable "kapsule_pg_policy_mode" {
 }
 
 variable "kapsule_pg_zone" {
-  default = ""
+  default = "fr-par-1"
 }
 
 variable "kapsule_k8s_version" {
-  default = ""
+  default = "1.16.9"
 }
 
 variable "kapsule_cni" {
-  default = ""
+  default = "weave"
 }
 
 variable "kapsule_dashboard" {
-  default = ""
+  default = false
 }
 
 variable "kapsule_ingress" {
-  default = ""
+  default = "nginx"
 }
 
 variable "kapsule_tags" {
@@ -54,25 +58,25 @@ variable "kapsule_default_pool_tags" {
 }
 
 variable "kapsule_node_type" {
-  default = ""
+  default = "DEV1-M"
 }
 
-variable "kapsule_autoscalling" {
-  default = ""
+variable "kapsule_autoscaling" {
+  default = true
 }
 
 variable "kapsule_autohealing" {
-  default = ""
+  default = true
 }
 
-variable "kapsule_autoscalling_lowcap" {
-  default = ""
+variable "kapsule_autoscaling_lowcap" {
+  default = 0
 }
 
-variable "kapsule_autoscalling_highcap" {
-  default = ""
+variable "kapsule_autoscaling_highcap" {
+  default = 1
 }
 
-variable "kapsule_autoscalling_disable_scaledown" {
-  default = ""
+variable "kapsule_autoscaling_disable_scaledown" {
+  default = false
 }
