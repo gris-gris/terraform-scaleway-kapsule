@@ -15,7 +15,7 @@ module "kapsule-quantile" {
   kapsule_pg_zone = "fr-par-1"
   kapsule_k8s_version = "1.16.9"
   kapsule_cni = "weave"
-  kapsule_dashboard = true
+  kapsule_dashboard = false
   kapsule_ingress = "nginx"
   kapsule_tags = [
     "Scope=example"
@@ -27,7 +27,7 @@ module "kapsule-quantile" {
   kapsule_autoscaling = true
   kapsule_autohealing = true
   kapsule_autoscaling_lowcap = 1
-  kapsule_autoscaling_highcap = 2
+  kapsule_autoscaling_highcap = 3
   kapsule_autoscaling_disable_scaledown = false
 }
 }
