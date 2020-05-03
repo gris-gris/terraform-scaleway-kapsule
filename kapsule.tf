@@ -23,6 +23,7 @@ resource "local_file" "kubeconfig" {
 }
 
 resource "scaleway_k8s_pool_beta" "kapsule-pool" {
+  name = var.kapsule_default_pool_name
   cluster_id = scaleway_k8s_cluster_beta.kapsule.id
   node_type = var.kapsule_node_type
   size = var.kapsule_autoscaling == true ? var.kapsule_size : 1

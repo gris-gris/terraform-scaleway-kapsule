@@ -1,5 +1,9 @@
 variable "kapsule_name" {
-  default = "default"
+  default = "default_kapsule"
+}
+
+variable "kapsule_default_pool_name" {
+  default = "default_pool"
 }
 
 variable "kapsule_size" {
@@ -7,7 +11,7 @@ variable "kapsule_size" {
 }
 
 variable "kapsule_pg_name" {
-  default = "kapsule"
+  default = "default_kapsule_pg"
 }
 
 variable "kapsule_pg_policy_type" {
