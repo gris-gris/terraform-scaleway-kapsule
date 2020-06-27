@@ -5,6 +5,8 @@ resource "scaleway_k8s_cluster_beta" "kapsule" {
   enable_dashboard = var.kapsule_dashboard
   ingress = var.kapsule_ingress
   tags = var.kapsule_tags
+  feature_gates = var.kapsule_feature_gates
+  admission_plugins = var.kapsule_admission_plugins
 
   autoscaler_config {
     disable_scale_down = var.kapsule_autoscaling_disable_scaledown
