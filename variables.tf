@@ -47,6 +47,16 @@ variable "kapsule_tags" {
   type        = list(string)
 }
 
+variable "kapsule_feature_gates" {
+  description = "Feature tags for Kapsule Cluster"
+  type        = list(string)
+}
+
+variable "kapsule_admission_plugins" {
+  description = "Admission plugins for Kapsule Cluster"
+  type        = list(string)
+}
+
 variable "kapsule_container_runtime" {
   description = "Possible values: docker, crio, containerd"
   default = "docker"
