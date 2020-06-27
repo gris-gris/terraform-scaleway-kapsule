@@ -50,13 +50,11 @@ variable "kapsule_tags" {
 variable "kapsule_feature_gates" {
   description = "Feature tags for Kapsule Cluster"
   type        = list(string)
-  default     = ""
 }
 
 variable "kapsule_admission_plugins" {
   description = "Admission plugins for Kapsule Cluster"
   type        = list(string)
-  default     = ""
 }
 
 variable "kapsule_container_runtime" {
